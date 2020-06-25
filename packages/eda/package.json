@@ -1,6 +1,6 @@
 {
   "name": "@dddl/eda",
-  "version": "1.0.18",
+  "version": "1.0.23",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/eda",

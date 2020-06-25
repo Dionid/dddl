@@ -1,6 +1,6 @@
 {
   "name": "@dddl/eda-inmemory",
-  "version": "1.0.18",
+  "version": "1.0.23",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/eda-inmemory",
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@dddl/common": "^1.0.18",
-    "@dddl/eda": "^1.0.18",
+    "@dddl/eda": "^1.0.23",
     "@dddl/errors": "^1.0.19",
     "@dddl/logger": "^1.0.18",
     "@dddl/rop": "^1.0.19",
