@@ -1,6 +1,6 @@
 {
   "name": "@dddl/common",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "DDDL common package for utils",
   "keywords": [
     "dddl"
