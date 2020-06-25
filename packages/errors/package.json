@@ -4,8 +4,6 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint . --ext .ts",
-    "prt:fmt": "prettier --config ../../.prettierrc 'src/**/*.ts' --write",
     "test:clearCache": "jest --clearCache",
     "test": "npm run test:clearCache && NODE_PATH=./src jest dist ./src",
     "build": "rimraf dist && tsc"
