@@ -10,7 +10,11 @@
     "test": "npm run test:clearCache && NODE_PATH=./src jest dist ./src",
     "build": "rimraf dist && tsc"
   },
-  "author": "",
+  "author": {
+    "name" : "David Shekunts",
+    "email" : "mail@davidshekunts.com",
+    "url" : "https://davidshekunts.com/"
+  },
   "license": "ISC",
-  "gitHead": "6475cad0d7e1d3367426a71d2f03cc073df70d42"
+  "gitHead": "73a80060ad76892dd587e9c41d8e3cffa7727b10"
 }

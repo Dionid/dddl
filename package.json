@@ -4,6 +4,11 @@
   "scripts": {
     "publish": "lerna run build && lerna publish"
   },
+  "author": {
+    "name" : "David Shekunts",
+    "email" : "mail@davidshekunts.com",
+    "url" : "https://davidshekunts.com/"
+  },
   "devDependencies": {
     "@types/node": "^14.0.14",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
