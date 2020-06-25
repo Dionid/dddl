@@ -11,5 +11,6 @@
     "build": "rimraf dist && tsc"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "6475cad0d7e1d3367426a71d2f03cc073df70d42"
 }
