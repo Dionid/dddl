@@ -1,9 +1,9 @@
 {
-  "name": "@dddl/dal",
+  "name": "@dddl/dal-knex",
   "version": "1.0.21",
   "description": "",
   "main": "dist/index.js",
-  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/dal",
+  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/dal-knex",
   "scripts": {
     "test:clearCache": "jest --clearCache",
     "test": "npm run test:clearCache && NODE_PATH=./src jest dist ./src",
@@ -26,9 +26,15 @@
   "deprecated": false,
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
   "peerDependencies": {
+    "@dddl/dal": "^1.0.21",
+    "@dddl/errors": "^1.0.19",
     "@dddl/rop": "^1.0.19"
   },
   "dependencies": {
-    "@dddl/rop": "^1.0.19"
+    "@dddl/dal": "^1.0.21",
+    "@dddl/errors": "^1.0.19",
+    "@dddl/rop": "^1.0.19",
+    "knex": "^0.21.1",
+    "typedi": "^0.8.0"
   }
 }
