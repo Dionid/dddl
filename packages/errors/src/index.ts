@@ -56,6 +56,6 @@ export class UnauthorizedErr extends PublicErr {
 export class PermissionDenied extends PublicErr {
   constructor(message?: string, customCode?: string, internalMessage?: string) {
     super(403, message, customCode, internalMessage)
-    this.message = message || "Permission denied!"
+    this.message = message || "Permission denied"
   }
 }
