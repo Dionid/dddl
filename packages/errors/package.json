@@ -1,6 +1,6 @@
 {
   "name": "errors",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,9 +11,9 @@
     "build": "rimraf dist && tsc"
   },
   "author": {
-    "name" : "David Shekunts",
-    "email" : "mail@davidshekunts.com",
-    "url" : "https://davidshekunts.com/"
+    "name": "David Shekunts",
+    "email": "mail@davidshekunts.com",
+    "url": "https://davidshekunts.com/"
   },
   "license": "ISC",
   "gitHead": "73a80060ad76892dd587e9c41d8e3cffa7727b10"
