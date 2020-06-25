@@ -1,0 +1,7 @@
+{
+  "name": "dddl",
+  "private": false,
+  "devDependencies": {
+    "lerna": "3.22.1"
+  }
+}
