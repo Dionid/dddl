@@ -3,9 +3,7 @@ import { Result, OkResult } from "@dddl/rop"
 import { Constructor } from "@dddl/common"
 import { DomainEvent } from "@dddl/eda"
 
-const AggregateRootBaseMixin = <TBase extends Constructor<{}>>(
-  superclass: TBase,
-) => {
+const AggregateRootBaseMixin = <TBase extends Constructor<{}>>(superclass: TBase) => {
   abstract class New extends superclass {
     private _domainEvents: DomainEvent[] = []
 
