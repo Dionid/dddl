@@ -1,6 +1,6 @@
 {
   "name": "@dddl/eda-inmemory",
-  "version": "1.0.23",
+  "version": "1.0.24",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/eda-inmemory",
@@ -25,13 +25,13 @@
   },
   "deprecated": false,
   "devDependencies": {
-    "jest-mock-extended": "github:Dionid/jest-mock-extended",
     "@dddl/common": "^1.0.18",
-    "@dddl/eda": "^1.0.23",
+    "@dddl/eda": "^1.0.24",
     "@dddl/errors": "^1.0.19",
     "@dddl/logger": "^1.0.18",
     "@dddl/rop": "^1.0.19",
-    "@dddl/usecase": "^1.0.21"
+    "@dddl/usecase": "^1.0.21",
+    "jest-mock-extended": "github:Dionid/jest-mock-extended"
   },
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
   "peerDependencies": {
