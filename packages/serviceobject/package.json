@@ -1,6 +1,6 @@
 {
   "name": "@dddl/serviceobject",
-  "version": "1.0.17",
+  "version": "1.0.19",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/serviceobject",
