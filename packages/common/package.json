@@ -5,8 +5,12 @@
   "keywords": [
     "dddl"
   ],
-  "author": "dionid <ditreyw@gmail.com>",
-  "homepage": "https://github.com/Dionid/dddl#readme",
+  "author": {
+    "name": "David Shekunts",
+    "email": "mail@davidshekunts.com",
+    "url": "https://davidshekunts.com/"
+  },
+  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/common",
   "license": "MIT",
   "main": "dist/index.js",
   "repository": {
