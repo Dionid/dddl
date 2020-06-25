@@ -1,6 +1,6 @@
 {
   "name": "@dddl/eda",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/eda",
@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@dddl/common": "^1.0.18",
-    "@dddl/rop": "^1.0.19",
-    "@dddl/usecase": "^1.0.21",
+    "@dddl/rop": "^1.0.25",
+    "@dddl/usecase": "^1.0.25",
     "jest-mock-extended": "github:Dionid/jest-mock-extended"
   },
   "peerDependencies": {

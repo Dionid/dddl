@@ -1,6 +1,6 @@
 {
   "name": "@dddl/rop",
-  "version": "1.0.19",
+  "version": "1.0.25",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/rop",

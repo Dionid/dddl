@@ -1,6 +1,6 @@
 {
   "name": "@dddl/dal",
-  "version": "1.0.22",
+  "version": "1.0.25",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/dal",
@@ -29,6 +29,6 @@
     "@dddl/rop": "^1.0.19"
   },
   "devDependencies": {
-    "@dddl/rop": "^1.0.19"
+    "@dddl/rop": "^1.0.25"
   }
 }
