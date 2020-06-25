@@ -13,6 +13,7 @@
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/common",
   "license": "MIT",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dionid/dddl.git"
