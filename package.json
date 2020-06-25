@@ -3,6 +3,7 @@
   "scripts": {
     "publish": "lerna run build && lerna publish"
   },
+  "license": "MIT",
   "author": {
     "name" : "David Shekunts",
     "email" : "mail@davidshekunts.com",

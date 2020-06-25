@@ -16,5 +16,6 @@
     "url": "https://davidshekunts.com/"
   },
   "license": "ISC",
+  "types": "dist/index.d.ts",
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf"
 }
