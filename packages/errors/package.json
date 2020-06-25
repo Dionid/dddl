@@ -23,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/Dionid/dddl/issues"
   },
+  "deprecated": false,
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf"
 }

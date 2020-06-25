@@ -27,5 +27,6 @@
   "bundleDependencies": false,
   "dependencies": {
     "class-validator": "^0.12.2"
-  }
+  },
+  "deprecated": false
 }
