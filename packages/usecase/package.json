@@ -1,6 +1,6 @@
 {
   "name": "@dddl/usecase",
-  "version": "1.0.18",
+  "version": "1.0.20",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/usecase",
