@@ -1,14 +1,14 @@
 import { Inject, Service } from "typedi"
-import { UseCaseHandle, UseCaseRequest } from "../../../usecase/src"
+import { v4 } from "uuid"
 import Knex from "knex"
-import { EitherResultP, Result } from "packages/rop/dist"
+import { UseCaseHandle, UseCaseRequest } from "@dddl/usecase"
+import { EitherResultP, Result } from "@dddl/rop"
 import {
   KNEX_CONNECTION_DI_TOKEN,
   TX_CONTAINER_DI_TOKEN,
   TxContainer,
-} from "common/dddl/repository/impl/knex"
-import { v4 } from "uuid"
-import { UseCaseDecorator } from "../../../usecase/src"
+} from "@dddl/dal-knex"
+import { UseCaseDecorator } from "@dddl/usecase"
 
 @Service()
 export class KnexTransactionDecorator implements UseCaseDecorator<any, any, any> {

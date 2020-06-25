@@ -2,7 +2,7 @@
 // import { Inject, Service } from "typedi"
 // import { v4 } from "uuid"
 // import { WithManager, WITH_MANAGER_DI_TOKEN } from "../../../repository/typeorm"
-// import { UseCaseDecorator, UseCaseHandle, UseCaseRequest } from "../index"
+// import { UseCaseDecorator, UseCaseHandle, UseCaseRequest } from "@dddl/usecase"
 // import { EitherResultP, Result } from "@dddl/rop"
 // import { InjectConnection } from "typeorm-typedi-extensions"
 //

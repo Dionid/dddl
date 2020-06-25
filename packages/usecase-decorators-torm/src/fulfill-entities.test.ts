@@ -4,7 +4,7 @@
 //   UseCaseReqData,
 //   UseCaseReqMeta,
 //   UseCaseRequest,
-// } from "../index"
+// } from "@dddl/usecase"
 // import { IsUUID } from "class-validator"
 // import { EitherResult, EitherResultP, Result } from "@dddl/rop"
 // import { AggregateRoot } from "common/dddl/domain/aggregate-root"

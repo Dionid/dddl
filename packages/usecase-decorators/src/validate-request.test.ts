@@ -1,8 +1,8 @@
 import { ValidateRequestDecorator } from "./validate-request"
-import { UseCase, UseCaseReqData, UseCaseReqMeta, UseCaseRequest } from "../index"
+import { UseCase, UseCaseReqData, UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
 import { EitherResultP, Result } from "@dddl/rop"
 import { IsEmail } from "class-validator"
-import mock, { MockProxy } from "jest-mock-extended/lib/Mock"
+import { mock, MockProxy } from "jest-mock-extended"
 
 class TestUCResponse {
   constructor(public result: boolean) {}

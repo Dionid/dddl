@@ -1,15 +1,15 @@
-import { UseCase, UseCaseReqMeta, UseCaseRequest } from "../../usecase/src"
-import { EitherResultP, Result } from "packages/rop/dist"
-import { Matcher, MockProxy } from "jest-mock-extended"
-import mock from "jest-mock-extended/lib/Mock"
+import { UseCase, UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
+import { EitherResultP, Result } from "@dddl/rop"
+import { Matcher, mock, MockProxy } from "jest-mock-extended"
 import { v4 } from "uuid"
-import { DSEventMeta, EventBusProvider } from "common/dddl/eda/eventbus"
+import { DSEventMeta, EventBusProvider } from "@dddl/eda"
 import {
   AsyncEventBusProviderSetMetaDecorator,
   AsyncEventBusProviderTransactionDecorator,
   SyncEventBusProviderSetMetaDecorator,
   SyncEventBusProviderTransactionDecorator,
-} from "common/dddl/usecase/decorators/eventbus"
+} from "./eventbus"
+
 class TestUC implements UseCase<any, any, any> {
   async handle(req: UseCaseRequest<any, any, any>): EitherResultP<any, Error> {
     return Result.ok(true)

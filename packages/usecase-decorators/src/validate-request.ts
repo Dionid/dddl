@@ -1,7 +1,7 @@
 import { Service } from "typedi"
-import { UseCaseHandle, UseCaseRequest } from "../../usecase/src"
-import { EitherResultP, validateResult } from "packages/rop/dist"
-import { UseCaseDecorator } from "../../usecase/src"
+import { UseCaseHandle, UseCaseRequest } from "@dddl/usecase"
+import { EitherResultP, validateResult } from "@dddl/rop"
+import { UseCaseDecorator } from "@dddl/usecase"
 
 @Service({ global: true })
 export class ValidateRequestDecorator implements UseCaseDecorator<any, any, any> {

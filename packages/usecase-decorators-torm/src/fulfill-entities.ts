@@ -4,7 +4,7 @@
 //   UseCaseDecorator,
 //   UseCaseHandle,
 //   UseCaseRequest,
-// } from "../index"
+// } from "@dddl/usecase"
 // import { Service } from "typedi"
 // import { Maybe } from "@dddl/common"
 // import { EitherResultP, Result } from "@dddl/rop"

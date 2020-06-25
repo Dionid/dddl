@@ -7,7 +7,7 @@ import {
   UseCaseReqData,
   UseCaseReqMeta,
   UseCaseRequest,
-} from "../index"
+} from "@dddl/usecase"
 
 class TEntity {
   author_id!: string

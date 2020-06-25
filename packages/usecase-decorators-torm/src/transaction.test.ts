@@ -1,5 +1,5 @@
 // import { MockProxy } from "jest-mock-extended"
-// import { UseCase, UseCaseReqMeta, UseCaseRequest } from "../index"
+// import { UseCase, UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
 // import { v4 } from "uuid"
 // import mock from "jest-mock-extended/lib/Mock"
 // import { TypeORMTransactionDecorator } from "common/dddl/usecase/decorators/typeorm/transaction"

@@ -1,8 +1,8 @@
 import { Service } from "typedi"
-import { UseCaseHandle, UseCaseRequest } from "../../usecase/src"
-import { EitherResultP, Result } from "packages/rop/dist"
+import { UseCaseHandle, UseCaseRequest } from "@dddl/usecase"
+import { EitherResultP, Result } from "@dddl/rop"
 import { UnauthorizedErr } from "@dddl/errors"
-import { UseCaseDecorator } from "../../usecase/src"
+import { UseCaseDecorator } from "@dddl/usecase"
 
 @Service({ global: true })
 class AuthenticatedDecorator implements UseCaseDecorator<any, any, any> {

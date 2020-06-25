@@ -1,8 +1,8 @@
-import { EitherResultP, Result } from "packages/rop/dist"
+import { EitherResultP, Result } from "@dddl/rop"
 import { Logger, LOGGER_DI_TOKEN } from "@dddl/logger"
 import { Inject, Service } from "typedi"
-import { UseCaseDecorator } from "../../usecase/src"
-import { UseCaseHandle, UseCaseRequest } from "../../usecase/src"
+import { UseCaseDecorator } from "@dddl/usecase"
+import { UseCaseHandle, UseCaseRequest } from "@dddl/usecase"
 
 @Service({ global: true })
 export class LoggerDecorator implements UseCaseDecorator<any, any, any> {

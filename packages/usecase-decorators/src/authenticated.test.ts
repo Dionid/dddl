@@ -1,8 +1,7 @@
-import { MockProxy } from "jest-mock-extended"
-import { UseCase, UseCaseReqMeta, UseCaseRequest } from "../../usecase/src"
+import { mock, MockProxy } from "jest-mock-extended"
+import { UseCase, UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
 import { v4 } from "uuid"
-import { Result } from "packages/rop/dist"
-import mock from "jest-mock-extended/lib/Mock"
+import { Result } from "@dddl/rop"
 import { UnauthorizedErr } from "@dddl/errors"
 import { AuthenticatedDecorator } from "./authenticated"
 
