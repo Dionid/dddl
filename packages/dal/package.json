@@ -28,7 +28,7 @@
   "peerDependencies": {
     "@dddl/rop": "^1.0.19"
   },
-  "dependencies": {
+  "devDependencies": {
     "@dddl/rop": "^1.0.19"
   }
 }

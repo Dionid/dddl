@@ -30,10 +30,12 @@
     "@dddl/errors": "^1.0.19",
     "@dddl/rop": "^1.0.19"
   },
-  "dependencies": {
+  "devDependencies": {
     "@dddl/dal": "^1.0.22",
     "@dddl/errors": "^1.0.19",
-    "@dddl/rop": "^1.0.19",
+    "@dddl/rop": "^1.0.19"
+  },
+  "dependencies": {
     "knex": "^0.21.1",
     "typedi": "^0.8.0"
   }
