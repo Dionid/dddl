@@ -25,7 +25,13 @@
   },
   "deprecated": false,
   "devDependencies": {
-    "jest-mock-extended": "github:Dionid/jest-mock-extended"
+    "jest-mock-extended": "github:Dionid/jest-mock-extended",
+    "@dddl/common": "^1.0.18",
+    "@dddl/eda": "^1.0.23",
+    "@dddl/errors": "^1.0.19",
+    "@dddl/logger": "^1.0.18",
+    "@dddl/rop": "^1.0.19",
+    "@dddl/usecase": "^1.0.21"
   },
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
   "peerDependencies": {
@@ -37,12 +43,6 @@
     "@dddl/usecase": "^1.0.21"
   },
   "dependencies": {
-    "@dddl/common": "^1.0.18",
-    "@dddl/eda": "^1.0.23",
-    "@dddl/errors": "^1.0.19",
-    "@dddl/logger": "^1.0.18",
-    "@dddl/rop": "^1.0.19",
-    "@dddl/usecase": "^1.0.21",
     "typedi": "^0.8.0"
   }
 }
