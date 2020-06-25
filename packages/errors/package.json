@@ -15,5 +15,12 @@
   },
   "license": "ISC",
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dionid/dddl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dionid/dddl/issues"
+  },
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf"
 }

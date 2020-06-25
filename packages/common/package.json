@@ -1,0 +1,25 @@
+{
+  "name": "common",
+  "version": "1.0.11",
+  "description": "DDDL common package for utils",
+  "keywords": [
+    "dddl"
+  ],
+  "author": "dionid <ditreyw@gmail.com>",
+  "homepage": "https://github.com/Dionid/dddl#readme",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dionid/dddl.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/Dionid/dddl/issues"
+  },
+  "dependencies": {
+    "class-validator": "^0.12.2"
+  }
+}
