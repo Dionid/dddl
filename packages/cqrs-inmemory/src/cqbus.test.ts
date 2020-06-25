@@ -4,9 +4,9 @@ import { v4 } from "uuid"
 import { UseCaseDecorator } from "@dddl/usecase"
 import { any, mock, MockProxy } from "jest-mock-extended"
 import { Logger } from "@dddl/logger"
-import { Command, CommandHandler, CommandRequest } from "@dddl/cqbus"
-import { CQBus } from "./cqbus"
-import { CQBus as ICQBus } from "@dddl/cqbus"
+import { Command, CommandHandler, CommandRequest } from "@dddl/cqrs"
+import { CQBus as ICQBus } from "@dddl/cqrs"
+import { CQBus } from "./index"
 
 class TestDecorator implements UseCaseDecorator<any, any, any> {
   public used = false

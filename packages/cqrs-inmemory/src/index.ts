@@ -25,7 +25,7 @@ import {
   CQBusMiddlewareWithSkipper,
   CQBusSubscription,
   createCQBusMiddlewareRegistrationMethods,
-} from "@dddl/cqbus"
+} from "@dddl/cqrs"
 
 export class CQBus {
   constructor(
