@@ -1,9 +1,9 @@
 {
-  "name": "@dddl/serviceobject",
-  "version": "1.0.17",
+  "name": "@dddl/rop",
+  "version": "1.0.18",
   "description": "",
   "main": "dist/index.js",
-  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/serviceobject",
+  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/rop",
   "scripts": {
     "test:clearCache": "jest --clearCache",
     "test": "npm run test:clearCache && NODE_PATH=./src jest dist ./src",
@@ -26,6 +26,12 @@
   "deprecated": false,
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
   "dependencies": {
+    "@dddl/common": "^1.0.18",
+    "@dddl/errors": "^1.0.18",
     "class-validator": "^0.12.2"
+  },
+  "peerDependencies": {
+    "@dddl/common": "^1.0.18",
+    "@dddl/errors": "^1.0.18"
   }
 }

@@ -1,7 +1,8 @@
 {
   "name": "dddl",
   "scripts": {
-    "publish": "lerna run build && lerna publish",
+    "build": "npm run prt:fmt && npm run lint && lerna run build",
+    "publish": "npm run build && lerna publish",
     "lint": "eslint . --ext .ts",
     "prt:fmt": "prettier --config .prettierrc './packages/**/src/**/*.ts' --write"
   },
