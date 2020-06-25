@@ -1,5 +1,5 @@
 {
-  "name": "errors",
+  "name": "@dddl/errors",
   "version": "1.0.4",
   "description": "",
   "main": "index.js",
@@ -16,5 +16,5 @@
     "url": "https://davidshekunts.com/"
   },
   "license": "ISC",
-  "gitHead": "73a80060ad76892dd587e9c41d8e3cffa7727b10"
+  "gitHead": "a730e363917a045c0f91cbb38c0cc694a793ab00"
 }
