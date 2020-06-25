@@ -2,7 +2,7 @@
   "name": "@dddl/errors",
   "version": "1.0.9",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "lint": "eslint . --ext .ts",
     "prt:fmt": "prettier --config ../../.prettierrc 'src/**/*.ts' --write",
