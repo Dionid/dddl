@@ -4,7 +4,9 @@
     "build": "npm run prt:fmt && npm run lint && lerna run build",
     "publish": "npm run build && lerna publish",
     "lint": "eslint . --ext .ts",
-    "prt:fmt": "prettier --config .prettierrc './packages/**/src/**/*.ts' --write"
+    "prt:fmt": "prettier --config .prettierrc './packages/**/src/**/*.ts' --write",
+    "test:clearCache": "jest --clearCache",
+    "test": "npm run test:clearCache && lerna run test"
   },
   "license": "MIT",
   "author": {
@@ -24,12 +26,17 @@
     "lerna": "^3.22.1",
     "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.1.1",
     "tslint": "^6.0.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "jest": "^26.1.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run prt:fmt && npm run lint"
     }
+  },
+  "dependencies": {
+
   }
 }

@@ -6,7 +6,6 @@
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/errors",
   "scripts": {
     "test:clearCache": "jest --clearCache",
-    "test": "npm run test:clearCache && NODE_PATH=./src jest dist ./src",
     "build": "rimraf dist && tsc"
   },
   "author": {
