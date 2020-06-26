@@ -33,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prt:fmt && npm run lint"
+      "pre-commit": "npm run prt:fmt && npm run lint && npm run test"
     }
   },
   "dependencies": {
