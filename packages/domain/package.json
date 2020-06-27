@@ -1,6 +1,6 @@
 {
   "name": "@dddl/domain",
-  "version": "1.0.27",
+  "version": "1.0.30",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/domain",
@@ -31,9 +31,9 @@
   },
   "devDependencies": {
     "@dddl/common": "^1.0.18",
-    "@dddl/eda": "^1.0.27",
-    "@dddl/rop": "^1.0.25",
-    "@dddl/serviceobject": "^1.0.19"
+    "@dddl/eda": "^1.0.30",
+    "@dddl/rop": "^1.0.30",
+    "@dddl/serviceobject": "^1.0.30"
   },
   "dependencies": {
     "shallow-equal-object": "^1.1.1"
