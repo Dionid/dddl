@@ -16,7 +16,7 @@ More about `DDD Light` you can find [here](https://new.davidshekunts.com/encyclo
 1. [faq.davidshekunts.com](https://faq.davidshekunts.com) (site) + https://github.com/Dionid/headless-faq (repo) 
 
 
-# What does `Component Framework` means?
+# What does "Component Framework" means?
 `DDD Light` is based on multiple patterns, models and ideas, inluding: `DDD`, `CQRS`, `EDA`, `SOA`, `ROP`, `DAL` and so on.
 
 But the main idea of `DDD Light` is to give you **abillity to use those concepts separately**:
