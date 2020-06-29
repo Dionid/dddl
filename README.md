@@ -5,7 +5,7 @@
 
 **npm:** https://www.npmjs.com/settings/dddl/packages
 
-`Domain Driven Design Light (DDDL) Component Framework` implementation for Node.js and TypeScript.
+Domain Driven Design Light (DDDL) Component Framework implementation for Node.js and TypeScript.
 
 Expeccialy good for Enterprise-grade applications.
 
@@ -14,6 +14,7 @@ More about `DDD Light` you can find [here](https://new.davidshekunts.com/encyclo
 # Used in
 
 1. [faq.davidshekunts.com](https://faq.davidshekunts.com) (site) + https://github.com/Dionid/headless-faq (repo) 
+
 
 # What does `Component Framework` means?
 `DDD Light` is based on multiple patterns, models and ideas, inluding: `DDD`, `CQRS`, `EDA`, `SOA`, `ROP`, `DAL` and so on.
