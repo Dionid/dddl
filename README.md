@@ -9,9 +9,11 @@ Expeccialy good for Enterprise-grade applications.
 
 **npm:** https://www.npmjs.com/settings/dddl/packages
 
+More about `DDD Light` you can find [here](https://new.davidshekunts.com/encyclopedia-domain-driven-design-light-what-is-it-and-why/)
+
 # Used in
 
-1. [faq.davidshekunts.com](https://faq.davidshekunts.com) (site) & https://github.com/Dionid/headless-faq (repo) 
+1. [faq.davidshekunts.com](https://faq.davidshekunts.com) (site) + https://github.com/Dionid/headless-faq (repo) 
 
 # What does `Component Framework` means?
 `DDD Light` is based on multiple patterns, models and ideas, inluding: `DDD`, `CQRS`, `EDA`, `SOA`, `ROP`, `DAL` and so on.
@@ -26,3 +28,5 @@ But the main idea of `DDD Light` is to give you **abillity to use those concepts
 There is no need to take whole `DDD` to your project if you need just a part of it.
 
 This gives you opportunity to include this libraries in existing project concept by concept (package by package).
+
+More about `DDD Light` you can find [here](https://new.davidshekunts.com/encyclopedia-domain-driven-design-light-what-is-it-and-why/)
