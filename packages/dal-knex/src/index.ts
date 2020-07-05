@@ -31,7 +31,6 @@ export class TxContainer {
 }
 
 export class KnexRepositoryBase<
-  // TODO. Think about more elegant way
   Aggregate extends { getStringId(): string; isTransient: boolean },
   AggregateState,
   ID,
