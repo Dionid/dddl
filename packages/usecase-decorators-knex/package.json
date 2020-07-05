@@ -1,6 +1,6 @@
 {
   "name": "@dddl/usecase-decorators-knex",
-  "version": "1.0.30",
+  "version": "1.1.0",
   "description": "",
   "main": "dist/index.js",
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/usecase-decorators-knex",
@@ -33,7 +33,7 @@
     "@dddl/usecase": "^1.0.25"
   },
   "devDependencies": {
-    "@dddl/dal-knex": "^1.0.30",
+    "@dddl/dal-knex": "^1.1.0",
     "@dddl/eda": "^1.0.30",
     "@dddl/errors": "^1.0.30",
     "@dddl/logger": "^1.0.30",
