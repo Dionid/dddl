@@ -19,8 +19,8 @@ interface AggregateMapperInstance {}
 
 export interface AggregateMapper<Aggregate, Model> {
   new (): AggregateMapperInstance
-  to(model: Model): Aggregate
-  from(aggregate: Aggregate): Model
+  to(model: Model): EitherResultP<Aggregate>
+  from(aggregate: Aggregate): EitherResultP<Model>
 }
 
 export interface KnexRepository<AG> extends RepositoryWithTx<AG> {}
@@ -148,9 +148,12 @@ export class KnexRepositoryBase<
       const aggregates: Aggregate[] = []
       for (let i = 0; i < models.length; i++) {
         const model = models[i]
-        const aggregate = this.aggregateMapper.to(model)
-        aggregate.isTransient = false
-        aggregates.push(aggregate)
+        const aggregateRes = await this.aggregateMapper.to(model)
+        if (aggregateRes.isError()) {
+          return Result.error(aggregateRes.error)
+        }
+        aggregateRes.value.isTransient = false
+        aggregates.push(aggregateRes.value)
       }
       return Result.ok(aggregates)
     } catch (e) {
@@ -166,9 +169,12 @@ export class KnexRepositoryBase<
       if (!model) {
         return Result.oku()
       }
-      const aggregate = this.aggregateMapper.to(model)
-      aggregate.isTransient = false
-      return Result.ok(aggregate)
+      const aggregateRes = await this.aggregateMapper.to(model)
+      if (aggregateRes.isError()) {
+        return Result.error(aggregateRes.error)
+      }
+      aggregateRes.value.isTransient = false
+      return Result.ok(aggregateRes.value)
     } catch (e) {
       return Result.error(e)
     }
