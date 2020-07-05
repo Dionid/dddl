@@ -139,7 +139,7 @@ export class KnexRepositoryBase<
     }
   }
 
-  private async getAll(
+  protected async getAll(
     query: Knex.QueryBuilder<Model, Model[]>,
   ): EitherResultP<Aggregate[]> {
     try {
@@ -160,7 +160,7 @@ export class KnexRepositoryBase<
     }
   }
 
-  private async getOne(
+  protected async getOne(
     query: Knex.QueryBuilder<Model, Model>,
   ): EitherResultP<Aggregate | undefined> {
     try {
