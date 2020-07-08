@@ -90,11 +90,15 @@ export class KnexRepositoryBase<
 
   async update(aggregate: Aggregate): EitherResultP {
     try {
+      const modelRes = await this.aggregateMapper.from(aggregate)
+      if (modelRes.isError()) {
+        return Result.error(modelRes.error)
+      }
       await this.executer(this.tableName)
         .where({
           [this.pkName]: aggregate.getStringId(),
         })
-        .update(this.aggregateMapper.from(aggregate))
+        .update(modelRes.value)
       return Result.oku()
     } catch (e) {
       return Result.error(e)
@@ -103,11 +107,11 @@ export class KnexRepositoryBase<
 
   async create(aggregate: Aggregate): EitherResultP {
     try {
-      await this.executer(this.tableName)
-        .where({
-          [this.pkName]: aggregate.getStringId(),
-        })
-        .insert(this.aggregateMapper.from(aggregate))
+      const modelRes = await this.aggregateMapper.from(aggregate)
+      if (modelRes.isError()) {
+        return Result.error(modelRes.error)
+      }
+      await this.executer(this.tableName).insert(modelRes.value)
       aggregate.isTransient = false
       return Result.oku()
     } catch (e) {
