@@ -24,11 +24,13 @@
   "deprecated": false,
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
   "peerDependencies": {
-    "@dddl/dal": "^1.0.21",
-    "@dddl/errors": "^1.0.19",
-    "@dddl/rop": "^1.0.19"
+    "@dddl/common": "^1.0.18",
+    "@dddl/dal": "^1.0.30",
+    "@dddl/errors": "^1.0.30",
+    "@dddl/rop": "^1.0.30"
   },
   "devDependencies": {
+    "@dddl/common": "^1.0.18",
     "@dddl/dal": "^1.0.30",
     "@dddl/errors": "^1.0.30",
     "@dddl/rop": "^1.0.30"
