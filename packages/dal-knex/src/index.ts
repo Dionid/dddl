@@ -88,7 +88,7 @@ export class KnexRepositoryBase<
     return this.knex
   }
 
-  async beforeUpdate(model: Model): Promise<Model> {
+  protected async beforeUpdate(model: Model): Promise<Model> {
     return model
   }
 
@@ -110,7 +110,7 @@ export class KnexRepositoryBase<
     }
   }
 
-  async beforeCreate(model: Model): Promise<Model> {
+  protected async beforeCreate(model: Model): Promise<Model> {
     return model
   }
 
