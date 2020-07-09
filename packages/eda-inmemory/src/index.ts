@@ -110,30 +110,34 @@ export class EventBusInMemoryProvider {
     meta: DSEventMeta,
     options?: EventBusPublishOptions,
   ): EitherResultP {
+    const errors: Error[] = []
     for (let i = 0; i < events.length; i++) {
       const event = events[i]
       // Validate
-      const errors = await validateResult(event)
-      if (errors.isError()) {
-        return errors
+      const vErr = await validateResult(event)
+      if (vErr.isError()) {
+        errors.push(vErr.error)
+        continue
       }
       // Get Handler
       const eventHandlers = this.subs[event.constructor.name]
       if (!eventHandlers) {
-        // Send ok if no handler subscribed
-        return Result.oku()
+        continue
       }
       if (!options || !options.immediate) {
         if (eventHandlers.length && this.transactionActivated) {
           this.events.push({ event, meta })
-          return Result.oku()
+          continue
         }
       }
       // Is not, than publish it
       const res = await this._publish(event, meta)
       if (res.isError()) {
-        return res
+        Array.isArray(res.error) ? errors.concat(res.error) : errors.push(res.error)
       }
+    }
+    if (errors.length) {
+      return Result.error(errors)
     }
     return Result.oku()
   }

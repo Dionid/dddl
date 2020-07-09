@@ -2,11 +2,7 @@ import * as Knex from "knex"
 import { FindByPkOptions, RepositoryWithTx, Specification } from "@dddl/dal"
 import { EitherResultP, Result } from "@dddl/rop"
 import { CriticalErr } from "@dddl/errors"
-import {
-  ModelClass,
-  Model as ObjectionModel,
-  QueryBuilderType
-} from "objection"
+import { ModelClass, Model as ObjectionModel, QueryBuilderType } from "objection"
 
 interface SpecMapperInstance {}
 
