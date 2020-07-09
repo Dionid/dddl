@@ -1,45 +1,47 @@
-import Knex from "knex"
-import { Service } from "typedi"
+import * as Knex from "knex"
+import { FindByPkOptions, RepositoryWithTx, Specification } from "@dddl/dal"
 import { EitherResultP, Result } from "@dddl/rop"
 import { CriticalErr } from "@dddl/errors"
-import { FindByPkOptions, RepositoryWithTx, Specification } from "@dddl/dal"
+import {
+  ModelClass,
+  Model as ObjectionModel,
+  QueryBuilderType
+} from "objection"
 
 interface SpecMapperInstance {}
 
-export interface SpecMapper<Aggregate, Model> {
+export interface SpecMapper<Aggregate, Model extends ObjectionModel> {
   new (): SpecMapperInstance
   map(
-    query: Knex.QueryBuilder<Model>,
+    query: QueryBuilderType<Model>,
     specs: Specification<Aggregate>[],
-  ): Knex.QueryBuilder<Model>
+  ): QueryBuilderType<Model>
 }
 
 interface AggregateMapperInstance {}
 
-export interface AggregateMapper<Aggregate, Model> {
+export interface AggregateMapper<Aggregate, Model extends ObjectionModel> {
   new (): AggregateMapperInstance
   to(model: Model): EitherResultP<Aggregate>
   from(aggregate: Aggregate): EitherResultP<Model>
 }
 
-export interface KnexRepository<AG> extends RepositoryWithTx<AG> {}
+export interface Repository<AG> extends RepositoryWithTx<AG> {}
 
-@Service()
 export class TxContainer {
   constructor(public tx: Knex.Transaction | null = null) {}
 }
 
-export class KnexRepositoryBase<
+export class ObjectionRepositoryBase<
   Aggregate extends { getStringId(): string; isTransient: boolean },
   AggregateState,
   ID,
-  Model
-> implements KnexRepository<Aggregate> {
+  Model extends ObjectionModel
+> implements Repository<Aggregate> {
   constructor(
     public id: string,
     protected knex: Knex,
-    protected tableName: string,
-    protected pkName: string,
+    protected model: ModelClass<Model>,
     protected specMapper: SpecMapper<Aggregate, Model>,
     protected aggregateMapper: AggregateMapper<Aggregate, Model>,
     protected txContainer: TxContainer,
@@ -101,11 +103,7 @@ export class KnexRepositoryBase<
       if (modifiedModelRes.isError()) {
         return Result.error(modifiedModelRes.error)
       }
-      await this.executer(this.tableName)
-        .where({
-          [this.pkName]: aggregate.getStringId(),
-        })
-        .update(modifiedModelRes.value)
+      await modifiedModelRes.value.$query(this.executer).update()
       return Result.oku()
     } catch (e) {
       return Result.error(e)
@@ -126,7 +124,7 @@ export class KnexRepositoryBase<
       if (modifiedModelRes.isError()) {
         return Result.error(modifiedModelRes.error)
       }
-      await this.executer(this.tableName).insert(modifiedModelRes.value)
+      await modifiedModelRes.value.$query(this.executer).insert()
       aggregate.isTransient = false
       return Result.oku()
     } catch (e) {
@@ -147,30 +145,32 @@ export class KnexRepositoryBase<
       if (aggregate.isTransient) {
         return Result.error(new Error("Can't delete transient aggregate"))
       }
-      await this.executer<Model>(this.tableName)
-        .where({
-          [this.pkName]: aggregate.getStringId(),
-        })
-        .delete()
+      await this.model.query(this.executer).deleteById(aggregate.getStringId())
       return Result.oku()
     } catch (e) {
       return Result.error(e)
     }
   }
 
-  protected async getAll(
-    query: Knex.QueryBuilder<Model, Model[]>,
-  ): EitherResultP<Aggregate[]> {
+  protected async fromModelToAggregate(model: Model): EitherResultP<Aggregate> {
+    const aggregateRes = await this.aggregateMapper.to(model)
+    if (aggregateRes.isError()) {
+      return Result.error(aggregateRes.error)
+    }
+    aggregateRes.value.isTransient = false
+    return aggregateRes
+  }
+
+  protected async getAll(query: QueryBuilderType<Model>): EitherResultP<Aggregate[]> {
     try {
-      const models = await query.select()
+      const models = (await query) as Model[]
       const aggregates: Aggregate[] = []
       for (let i = 0; i < models.length; i++) {
         const model = models[i]
-        const aggregateRes = await this.aggregateMapper.to(model)
+        const aggregateRes = await this.fromModelToAggregate(model)
         if (aggregateRes.isError()) {
           return Result.error(aggregateRes.error)
         }
-        aggregateRes.value.isTransient = false
         aggregates.push(aggregateRes.value)
       }
       return Result.ok(aggregates)
@@ -180,19 +180,14 @@ export class KnexRepositoryBase<
   }
 
   protected async getOne(
-    query: Knex.QueryBuilder<Model, Model>,
+    query: QueryBuilderType<Model>,
   ): EitherResultP<Aggregate | undefined> {
     try {
-      const model = await query.first()
+      const model = (await query.first()) as Model
       if (!model) {
         return Result.oku()
       }
-      const aggregateRes = await this.aggregateMapper.to(model)
-      if (aggregateRes.isError()) {
-        return Result.error(aggregateRes.error)
-      }
-      aggregateRes.value.isTransient = false
-      return Result.ok(aggregateRes.value)
+      return await this.fromModelToAggregate(model)
     } catch (e) {
       return Result.error(e)
     }
@@ -201,13 +196,13 @@ export class KnexRepositoryBase<
   async getBySpecs(
     specs: Specification<Aggregate>[],
   ): EitherResultP<Aggregate | undefined> {
-    const query = this.executer<Model, Model>(this.tableName)
+    const query = this.model.query(this.executer)
     this.specMapper.map(query, specs)
     return this.getOne(query)
   }
 
   async getAllBySpecs(specs: Specification<Aggregate>[]): EitherResultP<Aggregate[]> {
-    const query = this.executer<Model, Model[]>(this.tableName)
+    const query: QueryBuilderType<Model> = this.model.query(this.executer)
     this.specMapper.map(query, specs)
     return this.getAll(query)
   }
@@ -215,12 +210,10 @@ export class KnexRepositoryBase<
   async getByPk(
     options: FindByPkOptions<Aggregate>,
   ): EitherResultP<Aggregate | undefined> {
-    const query = this.executer<Model, Model>(this.tableName).where({
-      [this.pkName]: options.value,
-    })
-    return this.getOne(query)
+    const model = (await this.model.query(this.executer).findById(options.value)) as Model
+    return await this.fromModelToAggregate(model)
   }
 }
 
-export const TX_CONTAINER_DI_TOKEN = "TX_CONTAINER_DI_TOKEN"
+export const OBJECTION_TX_CONTAINER_DI_TOKEN = "TX_CONTAINER_DI_TOKEN"
 export const KNEX_CONNECTION_DI_TOKEN = "KNEX_CONNECTION_DI_TOKEN"
