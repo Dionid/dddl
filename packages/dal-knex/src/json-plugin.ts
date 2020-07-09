@@ -1,17 +1,17 @@
-import {KnexRepositoryBase} from "./base"
-import {EitherResultP, Result} from "@dddl/rop"
-import {Constructor} from "@dddl/common"
+import { KnexRepositoryBase } from "./base"
+import { EitherResultP, Result } from "@dddl/rop"
+import { Constructor } from "@dddl/common"
 
 const KnexRepositoryWithJsonColumnsMixin = <
   Aggregate extends { getStringId(): string; isTransient: boolean },
   AggregateState,
   ID,
   Model
-  >(
+>(
   jsonColNames: string[],
   KnexRepositoryBaseLikeClass: Constructor<
     KnexRepositoryBase<Aggregate, AggregateState, ID, Model>
-    >,
+  >,
 ): Constructor<KnexRepositoryBase<Aggregate, AggregateState, ID, Model>> => {
   return class extends KnexRepositoryBaseLikeClass {
     protected async stringifyJsonColumn(model: Model): Promise<Model> {
