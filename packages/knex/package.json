@@ -1,13 +1,8 @@
 {
   "name": "@dddl/knex",
-  "type": "module",
   "version": "1.2.2",
   "description": "DDD Light Knex implementations",
   "main": "dist/index.js",
-  "exports": {
-    ".": "./dist/index.js",
-    "./": "./dist/"
-  },
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/knex",
   "scripts": {
     "test:clearCache": "jest --clearCache",
