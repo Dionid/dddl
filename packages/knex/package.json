@@ -26,7 +26,9 @@
   "gitHead": "499458e2a4ac6426507b19d06feb897475644fca",
   "devDependencies": {
     "@dddl/core": "1.2.0",
+    "@hapi/joi": "^17.1.1",
     "@types/uuid": "^8.0.0",
+    "class-validator": "^0.12.2",
     "jest-mock-extended": "github:Dionid/jest-mock-extended",
     "knex": "^0.21.2",
     "typedi": "0.8.0"
