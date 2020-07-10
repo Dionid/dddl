@@ -1,7 +1,7 @@
 {
   "name": "@dddl/knex",
   "type": "module",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "DDD Light Knex implementations",
   "main": "dist/index.js",
   "exports": {
@@ -30,7 +30,7 @@
   "deprecated": false,
   "gitHead": "499458e2a4ac6426507b19d06feb897475644fca",
   "devDependencies": {
-    "@dddl/core": "1.2.1",
+    "@dddl/core": "^1.2.2",
     "@hapi/joi": "^17.1.1",
     "@types/uuid": "^8.0.0",
     "class-validator": "^0.12.2",
