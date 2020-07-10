@@ -23,7 +23,7 @@
     "url": "https://github.com/Dionid/dddl/issues"
   },
   "deprecated": false,
-  "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
+  "gitHead": "499458e2a4ac6426507b19d06feb897475644fca",
   "devDependencies": {
     "@hapi/joi": "^17.1.1",
     "@types/hapi__joi": "^17.1.3",
@@ -37,5 +37,8 @@
   },
   "dependencies": {
     "uuid": "^8.2.0"
+  },
+  "exports": {
+    "./": "./dist/"
   }
 }

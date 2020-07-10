@@ -1,8 +1,8 @@
 import Knex from "knex"
 import { Service } from "typedi"
-import { EitherResultP, Result } from "@dddl/rop"
-import { CriticalErr } from "@dddl/errors"
-import { FindByPkOptions, RepositoryWithTx, Specification } from "@dddl/dal"
+import { EitherResultP, Result } from "@dddl/core/dist/rop"
+import { CriticalErr } from "@dddl/core/dist/errors"
+import { FindByPkOptions, RepositoryWithTx, Specification } from "@dddl/core/dist/dal"
 
 interface SpecMapperInstance {}
 

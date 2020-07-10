@@ -1,6 +1,6 @@
 import { KnexRepositoryBase } from "./base"
-import { EitherResultP, Result } from "@dddl/rop"
-import { Constructor } from "@dddl/common"
+import { EitherResultP, Result } from "@dddl/core/dist/rop"
+import { Constructor } from "@dddl/core/dist/common"
 
 export const KnexRepositoryWithJsonColumnsMixin = <
   Aggregate extends { getStringId(): string; isTransient: boolean },
