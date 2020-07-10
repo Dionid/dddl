@@ -1,0 +1,41 @@
+{
+  "name": "@dddl/core",
+  "version": "1.0.30",
+  "description": "",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/core",
+  "scripts": {
+    "test:clearCache": "jest --clearCache",
+    "build": "rimraf dist && tsc",
+    "test": "NODE_PATH=./src jest ./src --config ../../jest.config.js --rootDir ./"
+  },
+  "author": {
+    "name": "David Shekunts",
+    "email": "mail@davidshekunts.com",
+    "url": "https://davidshekunts.com/"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dionid/dddl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dionid/dddl/issues"
+  },
+  "deprecated": false,
+  "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
+  "devDependencies": {
+    "@types/hapi__joi": "^17.1.3",
+    "@types/uuid": "^8.0.0",
+    "class-validator": "^0.12.2",
+    "jest-mock-extended": "github:Dionid/jest-mock-extended",
+    "@hapi/joi": "^17.1.1"
+  },
+  "peerDependencies": {
+    "typedi": "^0.8.0",
+    "@hapi/joi": "^17.1.1"
+  },
+  "dependencies": {
+    "uuid": "^8.2.0"
+  }
+}
