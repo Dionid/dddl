@@ -1,8 +1,13 @@
 {
   "name": "@dddl/knex",
+  "type": "module",
   "version": "1.2.1",
   "description": "DDD Light Knex implementations",
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./": "./dist/"
+  },
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/knex",
   "scripts": {
     "test:clearCache": "jest --clearCache",
@@ -25,7 +30,7 @@
   "deprecated": false,
   "gitHead": "499458e2a4ac6426507b19d06feb897475644fca",
   "devDependencies": {
-    "@dddl/core": "^1.2.1",
+    "@dddl/core": "1.2.1",
     "@hapi/joi": "^17.1.1",
     "@types/uuid": "^8.0.0",
     "class-validator": "^0.12.2",
@@ -34,7 +39,7 @@
     "typedi": "0.8.0"
   },
   "peerDependencies": {
-    "@dddl/core": "1.2.0",
+    "@dddl/core": "1.2.1",
     "knex": "^0.21.2",
     "typedi": "0.8.0"
   },

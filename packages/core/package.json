@@ -1,8 +1,13 @@
 {
   "name": "@dddl/core",
+  "type": "module",
   "version": "1.2.1",
   "description": "DDD Light Core implementation",
   "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./": "./dist/"
+  },
   "homepage": "https://github.com/Dionid/dddl/tree/master/packages/core",
   "scripts": {
     "test:clearCache": "jest --clearCache",
@@ -37,8 +42,5 @@
   },
   "dependencies": {
     "uuid": "^8.2.0"
-  },
-  "exports": {
-    "./": "./dist/"
   }
 }
