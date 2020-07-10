@@ -1,13 +1,13 @@
 import { Inject, Service } from "typedi"
-import { UseCaseHandle, UseCaseRequest } from "@dddl/usecase"
-import { EitherResultP, Result } from "@dddl/rop"
+import { UseCaseHandle, UseCaseRequest } from "../usecase"
+import { EitherResultP, Result } from "../rop"
 import {
   ASYNC_EVENT_BUS_PROVIDER_DI_TOKEN,
   DSEventMeta,
   EventBusProvider,
   SYNC_EVENT_BUS_PROVIDER_DI_TOKEN,
-} from "@dddl/eda"
-import { UseCaseDecorator } from "@dddl/usecase"
+} from "../eda"
+import { UseCaseDecorator } from "../usecase"
 
 @Service()
 export class SyncEventBusProviderTransactionDecorator

@@ -1,11 +1,13 @@
 {
-  "name": "@dddl/usecase",
+  "name": "@dddl/core",
   "version": "1.0.30",
   "description": "",
   "main": "dist/index.js",
-  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/usecase",
+  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/core",
   "scripts": {
-    "build": "rimraf dist && tsc"
+    "test:clearCache": "jest --clearCache",
+    "build": "rimraf dist && tsc",
+    "test": "NODE_PATH=./src jest ./src --config ../../jest.config.js --rootDir ./"
   },
   "author": {
     "name": "David Shekunts",
@@ -13,7 +15,6 @@
     "url": "https://davidshekunts.com/"
   },
   "license": "ISC",
-  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Dionid/dddl.git"
@@ -23,22 +24,16 @@
   },
   "deprecated": false,
   "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
-  "peerDependencies": {
-    "@dddl/common": "^1.0.18",
-    "@dddl/rop": "^1.0.19",
-    "@dddl/serviceobject": "^1.0.19",
-    "class-validator": "^0.12.2",
-    "knex": "^0.21.1",
-    "jest-mock-extended": "github:Dionid/jest-mock-extended"
-  },
   "devDependencies": {
-    "@dddl/common": "^1.0.18",
-    "@dddl/rop": "^1.0.30",
-    "@dddl/serviceobject": "^1.0.30",
+    "@types/hapi__joi": "^17.1.3",
     "@types/uuid": "^8.0.0",
     "class-validator": "^0.12.2",
-    "knex": "^0.21.1",
-    "typedi": "^0.8.0"
+    "jest-mock-extended": "github:Dionid/jest-mock-extended",
+    "@hapi/joi": "^17.1.1"
+  },
+  "peerDependencies": {
+    "typedi": "^0.8.0",
+    "@hapi/joi": "^17.1.1"
   },
   "dependencies": {
     "uuid": "^8.2.0"

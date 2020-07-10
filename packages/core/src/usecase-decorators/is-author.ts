@@ -1,8 +1,8 @@
-import { UseCaseHandle, UseCaseReqCtxWithEntities, UseCaseRequest } from "@dddl/usecase"
+import { UseCaseHandle, UseCaseReqCtxWithEntities, UseCaseRequest } from "../usecase"
 import { Service } from "typedi"
-import { EitherResultP, Result } from "@dddl/rop"
-import { PermissionDenied, CriticalErr } from "@dddl/errors"
-import { UseCaseDecorator } from "@dddl/usecase"
+import { EitherResultP, Result } from "../rop"
+import { PermissionDenied, CriticalErr } from "../errors"
+import { UseCaseDecorator } from "../usecase"
 
 const NotAuthorError = new PermissionDenied()
 

@@ -1,4 +1,4 @@
-import { EitherResultP } from "@dddl/rop"
+import { EitherResultP } from "../rop"
 
 export interface FindByPkOptions<E> {
   value: string | number

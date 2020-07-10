@@ -1,9 +1,9 @@
 import { any, mock, MockProxy } from "jest-mock-extended"
-import { IntegrationEvent } from "@dddl/eda"
-import { EventRequest } from "@dddl/eda"
-import { EitherResultP, Result } from "@dddl/rop"
+import { IntegrationEvent } from "../eda"
+import { EventRequest } from "../eda"
+import { EitherResultP, Result } from "../rop"
 import { EventBusInMemoryProvider } from "./index"
-import { Logger } from "@dddl/logger"
+import { Logger } from "../logger"
 
 class TestIntegrationEvent extends IntegrationEvent {}
 

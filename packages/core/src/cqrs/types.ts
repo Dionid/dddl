@@ -1,6 +1,6 @@
-import { UseCase, UseCaseReqCtx, UseCaseReqData, UseCaseRequest } from "@dddl/usecase"
-import { EitherResultP } from "@dddl/rop"
-import { UseCaseDecorator, UseCaseDecoratorHandle } from "@dddl/usecase"
+import { UseCase, UseCaseReqCtx, UseCaseReqData, UseCaseRequest } from "../usecase"
+import { EitherResultP } from "../rop"
+import { UseCaseDecorator, UseCaseDecoratorHandle } from "../usecase"
 
 export class Command extends UseCaseReqData<undefined> {}
 export class Query<Res> extends UseCaseReqData<Res> {}

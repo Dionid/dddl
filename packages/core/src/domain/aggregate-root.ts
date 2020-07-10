@@ -1,7 +1,7 @@
 import { Entity, EntityId, EntityWithState } from "./entity"
-import { Result, OkResult } from "@dddl/rop"
-import { Constructor } from "@dddl/common"
-import { DomainEvent } from "@dddl/eda"
+import { Result, OkResult } from "../rop"
+import { Constructor } from "../common"
+import { DomainEvent } from "../eda"
 
 const AggregateRootBaseMixin = <TBase extends Constructor<{}>>(superclass: TBase) => {
   abstract class New extends superclass {

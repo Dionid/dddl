@@ -1,13 +1,13 @@
 import { mock } from "jest-mock-extended"
 import { IsAuthorDecorator, NotAuthorError } from "./is-author"
-import { Result } from "@dddl/rop"
+import { Result } from "../rop"
 import {
   UseCase,
   UseCaseReqCtxWithEntities,
   UseCaseReqData,
   UseCaseReqMeta,
   UseCaseRequest,
-} from "@dddl/usecase"
+} from "../usecase"
 
 class TEntity {
   author_id!: string

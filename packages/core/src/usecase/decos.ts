@@ -1,5 +1,5 @@
-import { Constructor, TypeClassDecorator } from "@dddl/common"
-import { EitherResultP } from "@dddl/rop"
+import { Constructor, TypeClassDecorator } from "../common"
+import { EitherResultP } from "../rop"
 import { Container } from "typedi"
 import { UseCase, UseCaseHandle, UseCaseReqData, UseCaseRequest } from "./main"
 

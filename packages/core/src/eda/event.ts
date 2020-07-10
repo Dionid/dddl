@@ -1,5 +1,5 @@
 import { IsUUID } from "class-validator"
-import { UseCaseReqData } from "@dddl/usecase"
+import { UseCaseReqData } from "../usecase"
 
 export class DSEvent extends UseCaseReqData<undefined> {
   private isEvent = true

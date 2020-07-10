@@ -1,7 +1,7 @@
-import { Constructor } from "@dddl/common"
-import { UseCase, UseCaseReqData, UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
-import { EitherResultP } from "@dddl/rop"
-import { UseCaseDecorator } from "@dddl/usecase"
+import { Constructor } from "../common"
+import { UseCase, UseCaseReqData, UseCaseReqMeta, UseCaseRequest } from "../usecase"
+import { EitherResultP } from "../rop"
+import { UseCaseDecorator } from "../usecase"
 import { CQBusMiddlewareRegistration } from "./cqbus-middleware"
 
 export interface CQBus {

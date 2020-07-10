@@ -1,7 +1,7 @@
-import { ServiceObject } from "@dddl/serviceobject"
-import { EitherResultP } from "@dddl/rop"
 import { v4 } from "uuid"
 import { IsOptional, IsUUID, ValidateNested } from "class-validator"
+import { ServiceObject } from "../serviceobject"
+import { EitherResultP } from "../rop"
 
 export class UseCaseReqMeta {
   private isUseCaseReqMeta = true

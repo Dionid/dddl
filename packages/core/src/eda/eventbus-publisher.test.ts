@@ -1,6 +1,6 @@
 import { v4 } from "uuid"
 import { Matcher, mock, MockProxy } from "jest-mock-extended"
-import { EitherResultP, Result } from "@dddl/rop"
+import { EitherResultP, Result } from "../rop"
 import { IntegrationEvent } from "./integration-event"
 import { DSEventMeta, EventBusProvider, EventRequest } from "./eventbus"
 import { EventBusPublisher } from "./eventbus-publisher"

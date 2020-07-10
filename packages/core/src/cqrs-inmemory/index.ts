@@ -1,21 +1,21 @@
-import { Constructor } from "@dddl/common"
+import { Constructor } from "../common"
 import {
   UseCase,
   UseCaseHandle,
   UseCaseReqData,
   UseCaseReqMeta,
   UseCaseRequest,
-} from "@dddl/usecase"
-import { EitherResultP, Result } from "@dddl/rop"
-import { validateResult } from "@dddl/rop"
-import { CriticalErr } from "@dddl/errors"
+} from "../usecase"
+import { EitherResultP, Result } from "../rop"
+import { validateResult } from "../rop"
+import { CriticalErr } from "../errors"
 import { Container, Inject } from "typedi"
 import {
   getContainerInstanceIdFromReq,
   IoCUCDecorator,
   UseCaseDecorator,
-} from "@dddl/usecase"
-import { LOGGER_DI_TOKEN, Logger } from "@dddl/logger"
+} from "../usecase"
+import { LOGGER_DI_TOKEN, Logger } from "../logger"
 import {
   CQBusMiddleware,
   CQBusMiddlewareRegistration,
@@ -25,7 +25,7 @@ import {
   CQBusMiddlewareWithSkipper,
   CQBusSubscription,
   createCQBusMiddlewareRegistrationMethods,
-} from "@dddl/cqrs"
+} from "../cqrs"
 
 export class CQBus {
   constructor(

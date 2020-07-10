@@ -1,6 +1,6 @@
-import { stringifyClassValidatorErrors } from "@dddl/common"
-import { InvalidDataErr } from "@dddl/errors"
 import { validate, ValidatorOptions } from "class-validator"
+import { stringifyClassValidatorErrors } from "../common"
+import { InvalidDataErr } from "../errors"
 import { EitherResultP, Result } from "./result"
 
 export const validateResult = async (

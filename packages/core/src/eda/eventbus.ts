@@ -1,7 +1,7 @@
 import * as Joi from "@hapi/joi"
-import { EitherResult, EitherResultP, Result } from "@dddl/rop"
-import { Constructor } from "@dddl/common"
-import { UseCase, UseCaseReqCtx, UseCaseReqMeta } from "@dddl/usecase"
+import { EitherResult, EitherResultP, Result } from "../rop"
+import { Constructor } from "../common"
+import { UseCase, UseCaseReqCtx, UseCaseReqMeta } from "../usecase"
 import { DSEvent } from "./event"
 
 const eventValidationSchema = Joi.object({
@@ -16,7 +16,7 @@ export class DSEventMeta extends UseCaseReqMeta {
     originTransactionId,
     transactionId,
   }: {
-    callerId: string
+    callerId?: string
     originTransactionId?: string
     transactionId?: string
   }) {
@@ -28,7 +28,7 @@ export class DSEventMeta extends UseCaseReqMeta {
   }
 
   static create(params: {
-    callerId: string
+    callerId?: string
     originTransactionId?: string
     transactionId?: string
   }): EitherResult<DSEventMeta> {

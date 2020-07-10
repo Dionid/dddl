@@ -1,6 +1,6 @@
-import { UseCaseRequest } from "@dddl/usecase"
-import { EitherResultP, Result } from "@dddl/rop"
-import { UseCaseDecorator } from "@dddl/usecase"
+import { UseCaseRequest } from "../usecase"
+import { EitherResultP, Result } from "../rop"
+import { UseCaseDecorator } from "../usecase"
 import {
   CQBusMiddlewareRegistrationMethods,
   CQBusMiddlewareRules,

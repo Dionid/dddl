@@ -1,6 +1,6 @@
 import { ValidateRequestDecorator } from "./validate-request"
-import { UseCase, UseCaseReqData, UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
-import { EitherResultP, Result } from "@dddl/rop"
+import { UseCase, UseCaseReqData, UseCaseReqMeta, UseCaseRequest } from "../usecase"
+import { EitherResultP, Result } from "../rop"
 import { IsEmail } from "class-validator"
 import { mock, MockProxy } from "jest-mock-extended"
 

@@ -1,11 +1,11 @@
-import { UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
-import { EitherResultP, Result } from "@dddl/rop"
+import { UseCaseReqMeta, UseCaseRequest } from "../usecase"
+import { EitherResultP, Result } from "../rop"
 import { v4 } from "uuid"
-import { UseCaseDecorator } from "@dddl/usecase"
+import { UseCaseDecorator } from "../usecase"
 import { any, mock, MockProxy } from "jest-mock-extended"
-import { Logger } from "@dddl/logger"
-import { Command, CommandHandler, CommandRequest } from "@dddl/cqrs"
-import { CQBus as ICQBus } from "@dddl/cqrs"
+import { Logger } from "../logger"
+import { Command, CommandHandler, CommandRequest } from "../cqrs"
+import { CQBus as ICQBus } from "../cqrs"
 import { CQBus } from "./index"
 
 class TestDecorator implements UseCaseDecorator<any, any, any> {

@@ -1,16 +1,11 @@
-import { Constructor } from "@dddl/common"
-import { EitherResultP, Result } from "@dddl/rop"
-import { validateResult } from "@dddl/rop"
-import { CriticalErr } from "@dddl/errors"
-import { IoCUCDecorator } from "@dddl/usecase"
-import { Logger, LOGGER_DI_TOKEN } from "@dddl/logger"
-import {
-  DSEventMeta,
-  EventBusPublishOptions,
-  EventHandler,
-  EventRequest,
-} from "@dddl/eda"
-import { DSEvent } from "@dddl/eda"
+import { Constructor } from "../common"
+import { EitherResultP, Result } from "../rop"
+import { validateResult } from "../rop"
+import { CriticalErr } from "../errors"
+import { IoCUCDecorator } from "../usecase"
+import { Logger, LOGGER_DI_TOKEN } from "../logger"
+import { DSEventMeta, EventBusPublishOptions, EventHandler, EventRequest } from "../eda"
+import { DSEvent } from "../eda"
 import { Inject } from "typedi"
 
 type EventMap = { event: DSEvent; meta: DSEventMeta }[]

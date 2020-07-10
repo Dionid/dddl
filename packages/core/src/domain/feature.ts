@@ -1,5 +1,5 @@
-import { ServiceObject } from "@dddl/serviceobject"
-import { EitherResultP } from "@dddl/rop"
+import { ServiceObject } from "../serviceobject"
+import { EitherResultP } from "../rop"
 
 export class DomainFeatureReq<R> {
   private result?: R

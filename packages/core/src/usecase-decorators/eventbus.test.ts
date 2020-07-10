@@ -1,8 +1,8 @@
-import { UseCase, UseCaseReqMeta, UseCaseRequest } from "@dddl/usecase"
-import { EitherResultP, Result } from "@dddl/rop"
+import { UseCase, UseCaseReqMeta, UseCaseRequest } from "../usecase"
+import { EitherResultP, Result } from "../rop"
 import { Matcher, mock, MockProxy } from "jest-mock-extended"
 import { v4 } from "uuid"
-import { DSEventMeta, EventBusProvider } from "@dddl/eda"
+import { DSEventMeta, EventBusProvider } from "../eda"
 import {
   AsyncEventBusProviderSetMetaDecorator,
   AsyncEventBusProviderTransactionDecorator,

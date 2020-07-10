@@ -1,4 +1,4 @@
-import { shallowEqual } from "shallow-equal-object"
+import { shallowEqual } from "../common/shallow-equal-object"
 
 export abstract class ValueObjectBase<T> {
   public readonly props: T

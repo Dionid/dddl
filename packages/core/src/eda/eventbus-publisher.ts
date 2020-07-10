@@ -1,5 +1,5 @@
 import { Inject, Service } from "typedi"
-import { EitherResultP, Result } from "@dddl/rop"
+import { EitherResultP, Result } from "../rop"
 import {
   ASYNC_EVENT_BUS_PROVIDER_DI_TOKEN,
   DSEventMeta,

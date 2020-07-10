@@ -1,6 +1,6 @@
-import { UseCase, UseCaseRequest } from "@dddl/usecase"
-import { Constructor } from "@dddl/common"
-import { UseCaseDecorator } from "@dddl/usecase"
+import { UseCase, UseCaseRequest } from "../usecase"
+import { Constructor } from "../common"
+import { UseCaseDecorator } from "../usecase"
 
 export type CQBusMiddleware =
   | UseCaseDecorator<any, any, any>
