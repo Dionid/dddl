@@ -1,0 +1,42 @@
+{
+  "name": "@dddl/knex",
+  "version": "1.0.30",
+  "description": "",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/Dionid/dddl/tree/master/packages/knex",
+  "scripts": {
+    "test:clearCache": "jest --clearCache",
+    "build": "rimraf dist && tsc",
+    "test": "NODE_PATH=./src jest ./src --config ../../jest.config.js --rootDir ./"
+  },
+  "author": {
+    "name": "David Shekunts",
+    "email": "mail@davidshekunts.com",
+    "url": "https://davidshekunts.com/"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dionid/dddl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dionid/dddl/issues"
+  },
+  "deprecated": false,
+  "gitHead": "8b6710ad230383882e3fd484907844a5a564d5cf",
+  "devDependencies": {
+    "@types/uuid": "^8.0.0",
+    "jest-mock-extended": "github:Dionid/jest-mock-extended",
+    "joi": "^14.3.1",
+    "knex": "^0.21.2",
+    "typedi": "0.8.0"
+  },
+  "peerDependencies": {
+    "joi": "^14.3.1",
+    "knex": "^0.21.2",
+    "typedi": "0.8.0"
+  },
+  "dependencies": {
+    "uuid": "8.2.0"
+  }
+}
