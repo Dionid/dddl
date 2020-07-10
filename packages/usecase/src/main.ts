@@ -6,8 +6,8 @@ import { IsOptional, IsUUID, ValidateNested } from "class-validator"
 export class UseCaseReqMeta {
   private isUseCaseReqMeta = true
 
-  @IsUUID()
-  public callerId: string
+  @IsOptional()
+  public callerId?: string
   @IsUUID()
   public transactionId: string
   @IsUUID()
@@ -18,7 +18,7 @@ export class UseCaseReqMeta {
     originTransactionId,
     transactionId,
   }: {
-    callerId: string
+    callerId?: string
     originTransactionId?: string
     transactionId?: string
   }) {
