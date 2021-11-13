@@ -13,11 +13,12 @@ More about `DDD Light` you can find [here](https://new.davidshekunts.com/encyclo
 
 # DEPRECATION NOTES
 
-This library mostly based on OOP principles (like encapsulation, inheritance, rich domain model (RDM), etc.) and js mechanics (like classes), but, as time goes, I realized how Functional (or even Data Driven) approach makes my code much clearer, easy to write and evolve (data and behaviour separation, instead of encapsulation and RDM, composition over inheritance, ADT insted of classes, etc.), that's why I'm on my way to refactore this library in a Functional way.
+This library mostly based on OOP principles (like encapsulation, inheritance, rich domain model (RDM), etc.) and js mechanics (like classes), but, as time goes, I realized how Functional approach makes my code much clearer, easy to write and evolve (data and behaviour separation, instead of encapsulation and RDM, composition over inheritance, ADT insted of classes, etc.), that's why I'm on my way to refactore this library in a Functional way.
 
-Mostly this will affect only syntax (`classes` will become `types` and `funtions`).
+FROM NOW ON I will work on on this libraries:
 
-More news will come soon.
+1. 🛌 Fatigue Driven Development (FDD) (https://github.com/Dionid/fdd-ts)
+2. λ Functional Oriented Programming (FOP) (https://github.com/Dionid/functional-oriented-programming-ts)
 
 # Used in
 
