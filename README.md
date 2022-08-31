@@ -1,15 +1,9 @@
 # Domain Driven Design ⚡️ Light ⚡️ Component Framework for Node.js and TypeScript
 [![License](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/Dionid/dddl/blob/master/LICENSE.md)
 
-**Status:** deprecated
+**Status:** DEPRECATED
 
 **npm:** https://www.npmjs.com/settings/dddl/packages
-
-Domain Driven Design Light (DDDL) Component Framework implementation for Node.js and TypeScript.
-
-Expeccialy good for Enterprise-grade applications.
-
-More about `DDD Light` you can find [here](https://new.davidshekunts.com/encyclopedia-domain-driven-design-light-what-is-it-and-why/)
 
 # DEPRECATION NOTES
 
