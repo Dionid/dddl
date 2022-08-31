@@ -18,7 +18,7 @@ This library mostly based on OOP principles (like encapsulation, inheritance, ri
 FROM NOW ON I will work on on this libraries:
 
 1. 🛌 Fatigue Driven Development (FDD) (https://github.com/Dionid/fdd-ts)
-2. λ Functional Oriented Programming (FOP) (https://github.com/Dionid/functional-oriented-programming-ts)
+2. λ Functional Oriented Programming (FOP) (https://github.com/Dionid/fapfop)
 
 # Used in
 
