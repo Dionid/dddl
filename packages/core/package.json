@@ -28,7 +28,7 @@
     "@hapi/joi": "^17.1.1",
     "@types/hapi__joi": "^17.1.3",
     "@types/uuid": "^8.0.0",
-    "class-validator": "^0.12.2",
+    "class-validator": "^0.14.0",
     "jest-mock-extended": "github:Dionid/jest-mock-extended"
   },
   "peerDependencies": {
