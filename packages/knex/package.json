@@ -30,12 +30,12 @@
     "@types/uuid": "^8.0.0",
     "class-validator": "^0.12.2",
     "jest-mock-extended": "github:Dionid/jest-mock-extended",
-    "knex": "^0.21.2",
+    "knex": "^2.4.0",
     "typedi": "0.8.0"
   },
   "peerDependencies": {
     "@dddl/core": "1.2.2",
-    "knex": "^0.21.2",
+    "knex": "^2.4.0",
     "typedi": "0.8.0"
   },
   "dependencies": {
